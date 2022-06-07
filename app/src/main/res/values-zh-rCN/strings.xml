@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AZRotate</string>
+    <string name="rotate_screen">旋转屏幕方向</string>
+    <string name="grant_permission">请收起通知面板并在打开的设置页面中允许 AZRotate 更改系统设置。</string>
+    <string name="no_user_rotation">无法获取 USER_ROTATION 设置项。</string>
+    <string name="no_accelerometer_rotation">无法获取 ACCELEROMETER_ROTATION 设置项。</string>
+    <string name="disable_auto_rotate">请先关闭自动旋转屏幕方向来使用手动旋转屏幕方向。</string>
+</resources>
