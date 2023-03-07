@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    package="one.alynx.rotate">
+    xmlns:tools="http://schemas.android.com/tools">
     <!--
         Android Studio complains that this is only granted to system apps. But I really need it and
         it does work.

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">AZRotate</string>
     <string name="rotate_screen">Rotate screen</string>
-    <string name="grant_permission">Please collapse notification panel and allow AZRotate to change system settings in opened Settings page.</string>
+    <string name="grant_permission">Please allow AZRotate to change system settings in opened Settings page.</string>
     <string name="no_user_rotation">Failed to get USER_ROTATION setting.</string>
     <string name="no_accelerometer_rotation">Failed to get ACCELEROMETER_ROTATION setting.</string>
     <string name="disable_auto_rotate">Please disable auto rotate to use rotate screen.</string>

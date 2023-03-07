@@ -17,7 +17,8 @@ public class RotateTileService extends TileService {
         super.onStartListening();
 
         Tile qsTile = getQsTile();
-        qsTile.setState(Tile.STATE_ACTIVE);
+        // This is not a toggle.
+        qsTile.setState(Tile.STATE_INACTIVE);
         qsTile.updateTile();
     }
 
@@ -47,11 +48,13 @@ public class RotateTileService extends TileService {
             Log.d(TAG, "Request permission to change system settings.\n");
             Toast toast = Toast.makeText(this, R.string.grant_permission, Toast.LENGTH_LONG);
             toast.show();
-            // There is no way to collapse notification panel, using broadcast is deprecated in
-            // Android 12.
             Intent intent = new Intent(Settings.ACTION_MANAGE_WRITE_SETTINGS);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-            startActivity(intent);
+            // This requires API 24 or later, but I already set `minSdk` to 24.
+            startActivityAndCollapse(intent);
+            // On Android 14 or later you have to use this, but currently it is in preview.
+            // PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
+            // startActivityAndCollapse(pendingIntent);
             return;
         }
 
